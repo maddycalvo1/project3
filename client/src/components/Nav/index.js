@@ -11,9 +11,9 @@ function Nav() {
     // </nav>
       <nav className="navbar is-info" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-          </a>
+          <h1 className="is-size-1">
+            Dog Blogs
+          </h1>
 
           <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
