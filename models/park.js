@@ -6,6 +6,6 @@ const parkSchema = new Schema({
   location: { type: String, required: true },
 });
 
-const Park = mongoose.model("Park", bookSchema);
+const Park = mongoose.model("Park", parkSchema);
 
 module.exports = Park;
