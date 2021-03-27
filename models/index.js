@@ -1,5 +1,5 @@
 module.exports = {
-  Park: require("./parks"),
+  Park: require("./park"),
   Image: require("./image"),
   BlogPost: require("./blog")
 };

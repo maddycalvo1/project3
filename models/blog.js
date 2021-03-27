@@ -7,6 +7,7 @@ const blogSchema = new Schema({
     synopsis: String,
     date: { type: Date, default: Date.now },
     // picture: {type: }
+    park: { type: String }
   });
 
 
