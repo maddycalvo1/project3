@@ -1,11 +1,11 @@
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
+import { Col, Columns, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
 function NoMatch() {
   return (
     <Container fluid>
-      <Row>
+      <Columns>
         <Col size="md-12">
           <Jumbotron>
             <h1>404 Page Not Found</h1>
@@ -16,7 +16,7 @@ function NoMatch() {
             </h1>
           </Jumbotron>
         </Col>
-      </Row>
+      </Columns>
     </Container>
   );
 }
