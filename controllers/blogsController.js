@@ -1,4 +1,6 @@
+const { Park } = require("../models");
 const db = require("../models");
+const Blog = require("../models/blog");
 
 // Defining methods for the parksController
 module.exports = {
@@ -18,7 +20,16 @@ module.exports = {
   create: function(req, res) {
     db.Blog
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      // .then(dbModel => res.json(dbModel))
+      .then((result) => {
+        Park.findOne({ name: result.park }, (err, park) => {
+          if (park) {
+            park.blog.push(result);
+            park.save();
+            res.json({message: "Blog successfully added to the park!"});
+          }
+        });
+      })
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {

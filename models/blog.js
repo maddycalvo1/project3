@@ -6,8 +6,14 @@ const blogSchema = new Schema({
     username: { type: String, required: true },
     synopsis: String,
     date: { type: Date, default: Date.now },
-    // picture: {type: }
-    park: { type: String }
+    image: [{
+      type: Schema.Types.ObjectId,
+      ref: "Image"
+     }],
+    park: { 
+      type: Schema.Types.ObjectId,
+      ref: "Park"
+     }
   });
 
 
