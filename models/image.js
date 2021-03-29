@@ -8,6 +8,10 @@ const imageSchema = new Schema({
     {
         data: Buffer,
         contentType: String
+    },
+    blog: {
+        type: Schema.Types.ObjectId,
+        ref: "Blog"
     }
 });
 
