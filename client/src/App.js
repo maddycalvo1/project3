@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import AutoLocationList from "./pages/AutoLocationList";
-import InputLocationList from "./pages/InputLocationList";
+import SearchResultsPage from "./pages/SearchResultsPage";
+import ParksPage from "./pages/ParksPage";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
@@ -18,8 +18,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/home" component={Home} />
-            <Route exact path="/AutoLocationList" component={AutoLocationList} />
-            <Route exact path="/InputLocationList" component={InputLocationList} />
+            <Route exact path="/SearchResultsPage" component={SearchResultsPage} />
+            <Route exact path="/ParksPage" component={ParksPage} />
             <Route exact path="/posts/:id" component={Detail} />
             <Route component={NoMatch} />
           </Switch>

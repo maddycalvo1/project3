@@ -9,7 +9,7 @@ import { List, ListItem } from "../components/List";
 import SearchBtn from "../components/SearchBtn/SearchBtn";
 import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
 
-function Books() {
+function PageLayout() {
   // Setting our component's initial state
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
@@ -87,7 +87,12 @@ function Books() {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              
+              <h3>If you use 'Current Location', you will allow <b>Dog Blogg</b> to use your browser location to automate the search for you. 
+<br></br>
+<br></br>
+                If you 'Choose Your Location', you will search the location of the search. 
+              </h3>
             )}
           </Col>
         </Columns>
@@ -96,4 +101,4 @@ function Books() {
   }
 
 
-export default Books;
+export default PageLayout;
