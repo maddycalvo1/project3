@@ -4,14 +4,16 @@ function Jumbotron() {
   return (
     <>
     <div className="hero">
-    <p>
-      Look Up Dog Parks 
-    </p>
-    <p className="subtitle">
-    Near ME
-    </p>
-  </div>
-  </>
+      <div className="hero-body">
+        <p>
+        Look Up Dog Parks 
+        </p>
+        <p className="subtitle">
+        Near Me
+        </p>
+      </div>
+    </div>
+    </>
   );
 }
 

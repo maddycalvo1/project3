@@ -5,7 +5,9 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Columns, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input, TextArea, FormBtn } from "../components/Form";
+import SearchBtn from "../components/SearchBtn/SearchBtn";
+import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
 
 function Books() {
   // Setting our component's initial state
@@ -57,38 +59,20 @@ function Books() {
     return (
       <Container fluid>
         <Columns>
-          <Col size="is-6">
+          <Col size="is-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
             </Jumbotron>
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
+
+            <CurrentBtn>
+
+            </CurrentBtn>
+            <SearchBtn>
+
+            </SearchBtn>
           </Col>
-          <Col size="is-6">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
+          </Columns>
+          <Columns>
+          <Col size="is-12">
             {books.length ? (
               <List>
                 {books.map(book => (
