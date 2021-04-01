@@ -12,7 +12,7 @@ function Nav() {
       <nav className="navbar is-info" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <h1 className="is-size-1">
-            Dog Blogs
+            Dog Bloggs
           </h1>
 
           <a role="button" className="Nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

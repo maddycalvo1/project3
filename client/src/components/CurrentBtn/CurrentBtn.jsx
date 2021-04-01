@@ -3,7 +3,9 @@ import React from "react";
 
 function CurrentBtn() {
     return (
-        <button class="button">Use Current Location</button>
+        <a className="button" href="/SearchResultsPage">
+        Use Current Location
+            </a>
     );
 }
 
