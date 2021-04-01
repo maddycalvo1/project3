@@ -4,20 +4,24 @@ import Jumbotron from "../components/Jumbotron";
 
 function NoMatch() {
   return (
+    <div>
     <Container fluid>
-      <Columns>
+
         <Col size="md-12">
-          <Jumbotron>
             <h1>404 Page Not Found</h1>
             <h1>
               <span role="img" aria-label="Face With Rolling Eyes Emoji">
                 🙄
               </span>
             </h1>
-          </Jumbotron>
+            <img 
+      src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2019/07/15092404/do-dogs-grieve-other-dogs.jpg"
+      alt="new"
+      />
         </Col>
-      </Columns>
+
     </Container>
+    </div>
   );
 }
 
