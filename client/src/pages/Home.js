@@ -69,6 +69,7 @@ function PageLayout() {
             <SearchBtn>
 
             </SearchBtn>
+          
           </Col>
           </Columns>
           <Columns>
