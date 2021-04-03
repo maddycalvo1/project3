@@ -71,8 +71,8 @@ function PageLayout() {
             </SearchBtn>
           
           </Col>
-          </Columns>
-          <Columns>
+        </Columns>
+        <Columns>
           <Col size="is-12">
             {books.length ? (
               <List>
@@ -97,6 +97,12 @@ function PageLayout() {
             )}
           </Col>
         </Columns>
+        {/* <Columns>
+              <Col>
+              </Col>
+        </Columns> */}
+        {/* insert pictures above, inside the */}
+
       </Container>
     );
   }
