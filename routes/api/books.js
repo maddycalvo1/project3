@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/parksController");
 
+
 // Matches with "/api/books"
 router.route("/")
   .get(booksController.findAll)
@@ -9,7 +10,7 @@ router.route("/")
 // Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(booksController.findById)
+  // .get(booksController.findById)
   .put(booksController.update)
   .delete(booksController.remove);
 

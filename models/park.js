@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const parkSchema = new Schema({
   name: { type: String, required: true },
   location: { type: String, required: true },
+  id: {type: String, required:true},
   blogs: [{
     type: Schema.Types.ObjectId,
     ref: "Blog"

@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Columns, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
-import SearchBtn from "../components/SearchBtn/SearchBtn";
-import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
+
 
 function PageLayout() {
  
@@ -15,10 +14,10 @@ function PageLayout() {
       <Container fluid>
         <Columns>
           <Col size="is-12">
-            <Jumbotron>
-            </Jumbotron>
-
-            <List></List>
+            <List>
+{/* add to this List component */}
+              
+            </List>
           </Col>
           </Columns>
           
