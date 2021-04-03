@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function Jumbotron() {
   return (
@@ -8,7 +9,7 @@ function Jumbotron() {
         <p>
         Look Up Dog Parks 
         </p>
-        <p className="subtitle">
+        <p>
         Near Me
         </p>
       </div>
