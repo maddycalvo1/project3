@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../components/DeleteBtn";
+// import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -13,27 +13,31 @@ function PageLayout() {
   // Setting our component's initial state
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
-
+  const [targetDest, setTargetDest] = useState("78660")
   // Load all books and store them with setBooks
-  useEffect(() => {
-    loadBooks()
-  }, [])
+  // useEffect(() => {
+  //   loadParks(targetDest)
+  // }, [])
+
+
 
   // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
-      .then(res => 
-        setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+  // function loadParks(dest) {
+  //   Google.getZipData(dest)
+  //     .then(res => 
+  //       console.log(res.data)
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
-      .catch(err => console.log(err));
-  }
+
+
+  // // Deletes a book from the database with a given id, then reloads books from the db
+  // function deleteBook(id) {
+  //   API.deleteBook(id)
+  //     .then(res => loadBooks())
+  //     .catch(err => console.log(err));
+  // }
 
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
@@ -45,15 +49,15 @@ function PageLayout() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
-      API.saveBook({
-        title: formObject.title,
-        author: formObject.author,
-        synopsis: formObject.synopsis
-      })
-        .then(res => loadBooks())
-        .catch(err => console.log(err));
-    }
+    // if (formObject.title && formObject.author) {
+    //   API.saveBook({
+    //     title: formObject.title,
+    //     author: formObject.author,
+    //     synopsis: formObject.synopsis
+    //   })
+    //     .then(res => loadBooks())
+    //     .catch(err => console.log(err));
+    // }
   };
 
     return (
@@ -83,7 +87,7 @@ function PageLayout() {
                         {book.title} by {book.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
+                    {/* <DeleteBtn onClick={() => deleteBook(book._id)} /> */}
                   </ListItem>
                 ))}
               </List>
