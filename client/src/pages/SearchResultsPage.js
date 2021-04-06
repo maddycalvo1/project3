@@ -9,6 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBtn from "../components/SearchBtn/SearchBtn";
 import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
 import InputField from "../components/SearchInput/SearchInput";
+import Footer from "../components/Footer/Footer"
 
 function PageLayout() {
  
@@ -21,6 +22,7 @@ function PageLayout() {
             <List></List>
           </Col>
           </Columns>
+          <Footer></Footer>
           
       </Container>
     );
