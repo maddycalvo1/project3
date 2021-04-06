@@ -1,0 +1,16 @@
+.navbar {
+    
+    /* height: 80px;background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .navbar-item:hover {
+    border-bottom: 4px solid #fff;
+    transition: all 0.2s ease-out;
+  }

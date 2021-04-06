@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 // import 'react-bulma-components/dist/react-bulma-components.min.css';
 // import { Navbar } from 'react-bulma-components';
 
@@ -26,6 +27,12 @@ function Nav() {
             </a>
             <a className="navbar-item" href="/aboutus">
               About us
+            </a>
+            <a className="navbar-item" href="/home">
+              Parks
+            </a>
+            <a className="navbar-item" href="/aboutus">
+              ????
             </a>
             
           </div>
