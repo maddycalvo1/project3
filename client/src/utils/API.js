@@ -1,20 +1,28 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  // Gets all Parks in the given location
+  searchParks: function(location) {
+    return axios.get("/api/search/"+ location);
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  // Gets the Park with the given id
+  getPark: function(id) {
+    return axios.get("/api/search/location/" + id);
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Saves the Park into our DB
+  savePark: function(parkData) {
+    return axios.post("/api/park/", parkData);
   },
   // Saves a book to the database
-  saveBook: function(bookData) {
+  getBook: function(bookData) {
     return axios.post("/api/books", bookData);
+  },
+  // Get all the blogs! ALL OF THEM!!!
+  getBlogs: function() {
+    return axios.get("/api/blogs")
+  },
+  // Time to save a Blog thing!
+  saveBlog: function(blogData) {
+    return axios.post("api/blogs", blogData)
   }
 };
