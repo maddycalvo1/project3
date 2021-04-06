@@ -8,17 +8,41 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBtn from "../components/SearchBtn/SearchBtn";
 import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
-import InputField from "../components/SearchInput/SearchInput";
 import Footer from "../components/Footer/Footer"
+// need to import the data from the API using useEffect
+
+
 
 function PageLayout() {
- 
+    const [allData, setAllData] = useState([])
+    const [zipcode, setZipcode] = useState("")
+    const [zip, setZip] = useState("")
+
+    useEffect(() => {
+      if (zipcode.length === 5) {
+
+      
+      API.searchParks(zipcode).then(res => {
+        setAllData(res.data.results)
+        console.log(res.data.results);
+      })
+    }
+    }, [zipcode])
+
+
     return (
       <Container fluid>
         <Columns>
           <Col size="is-12">
-            <InputField></InputField>
-
+        <input name="zip" value={zip} onChange={(e) => setZip(e.target.value)} />
+        <button onClick={() => setZipcode(zip)}>Enter Zipcode</button>
+          <h3 className="title">{allData[0]?.plus_code?.compound_code.split(" ").splice(1).join(" ")}</h3>
+              <ol>
+                {allData.map((data, index) => (
+                  <li key={index} id={data.place_id}>{data.name}</li>
+                  // <InputField data={data} key={index}></InputField>
+                ))}
+              </ol>
             <List></List>
           </Col>
           </Columns>
