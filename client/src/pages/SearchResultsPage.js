@@ -8,6 +8,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBtn from "../components/SearchBtn/SearchBtn";
 import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
+import InputField from "../components/SearchInput/SearchInput";
 
 function PageLayout() {
  
@@ -15,8 +16,7 @@ function PageLayout() {
       <Container fluid>
         <Columns>
           <Col size="is-12">
-            <Jumbotron>
-            </Jumbotron>
+            <InputField></InputField>
 
             <List></List>
           </Col>
