@@ -4,7 +4,7 @@ import "./style.css"
 import image from "../../images/img-1.jpg";
 
 //Store static text content to use as props.
-const Items = [image, "HubSpot", "Google", "Adobe", "Slack", "MailChimp", "Shopify"];
+const Items = [image];
 
 //Component to render one element for each of the Items array.
 function TextItem(props) {
