@@ -6,7 +6,7 @@ function Jumbotron() {
     <>
     <div className="hero">
       <div className="hero-body">
-        <p>
+        <p className= "nearMe">
         Look Up Dog Parks 
         </p>
         <p>

@@ -6,7 +6,6 @@ import ParksPage from "./pages/ParksPage";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer/Footer"
 import { StoreProvider } from "./utils/GlobalState";
 import AboutUs from "./pages/AboutUs"
 
@@ -27,7 +26,7 @@ function App() {
             <Route exact path="/AboutUs" component={AboutUs} />
             <Route exact path ="/*" component={NoMatch} />
           </Switch>
-        <Footer />
+        
         </StoreProvider>
       </div>
     </Router>

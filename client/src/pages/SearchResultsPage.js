@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Columns, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBtn from "../components/SearchBtn/SearchBtn";
 import CurrentBtn from "../components/CurrentBtn/CurrentBtn";
 
