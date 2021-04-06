@@ -1,0 +1,48 @@
+:root {
+	--base-unit: 1vmin;
+	--base-coeff: 60;
+	--base-item-width: calc(var(--base-coeff) * var(--base-unit));
+	--base-item-half: calc((var(--base-item-width) / 2));
+	--four-fifth: calc(var(--base-item-width) * 0.8);
+	--one-fifth: calc(var(--base-item-width) * 0.2);
+	--first-pos: calc(var(--four-fifth) * -1);
+	--second-pos: calc(50% - var(--base-item-half));
+	--third-pos: calc(100% - var(--one-fifth));
+	--fourth-pos: calc(150% - var(--one-fifth));
+}
+
+#wrap {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#wrap #text-carousel-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	margin: auto;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+}
+
+#wrap #text-carousel-container * {
+	position: absolute;
+}
+
+#wrap #text-carousel-container .carousel-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100%;
+	height: 50%;
+	color: #fff;
+	font-size: 50px;
+	font-family: sans-serif;
+}
+
+.image-style{
+    width: 250px;
+}

@@ -18,8 +18,7 @@ function VideoComponent() {
             className='btns'
             buttonStyle='btn--primary'
             buttonSize='btn--large'>
-            USE Current LOCATION <i className='far
-                   fa-play-circle'/>
+            USE Current LOCATION 
              </Button>
             </div >
             

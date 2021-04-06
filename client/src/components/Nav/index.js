@@ -1,46 +1,55 @@
-import React from "react";
+import React from "react"
 import "./style.css"
-// import 'react-bulma-components/dist/react-bulma-components.min.css';
-// import { Navbar } from 'react-bulma-components';
 
-function Nav() {
+
+
+
+
+
+
+export default function Navbar() {
+  const [isActive, setisActive] = React.useState(false)
+
   return (
-    // <nav className="navbar is-info" role="navigation" aria-label="main navigation">
-    //   <a className="navbar-brand" href="/">
-    //     Home
-    //   </a>
-    // </nav>
-      <nav className="navbar is-info" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <h1 className="is-size-1">
-            Dog Bloggs
-          </h1>
+    <nav className='navbar' role='navigation' aria-label='main navigation'>
+      <div className='navbar-brand'>
+      <h1><a href='/home' className='navbar-logo'>
+          Dog<i className="fas fa-paw"></i>Bloggs
+        </a></h1>
 
-          <a role="button" className="Nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" className="navbar-menu">
-          <div className="navbar-start">
-            <a className="navbar-item" href="/home">
+        <a
+          onClick={() => {
+            setisActive(!isActive)
+          }}
+          role='button'
+          className={`navbar-burger burger ${isActive ? 'is-active' : ''}`}
+          aria-label='menu'
+          aria-expanded='false'
+          data-target='navbarBasicExample'
+        >
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+        </a>
+      </div>
+      <div id='navbarBasicExample' className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
+        <div className='navbar-end'>
+          <div className='navbar-item'>
+            <a href='/home' className='navbar-item'>
               Home
             </a>
-            <a className="navbar-item" href="/aboutus">
-              About us
+            <a href='/aboutus' className='navbar-item'>
+              About Us
             </a>
-            <a className="navbar-item" href="/home">
+            <a href='/parks' className='navbar-item'>
               Parks
             </a>
-            <a className="navbar-item" href="/aboutus">
-              ????
+            <a href='/home' className='navbar-item'>
+              Details
             </a>
-            
           </div>
-
-         
         </div>
-      </nav>
-  );
+      </div>
+    </nav>
+  )
 }
-
-export default Nav;
