@@ -32,7 +32,7 @@ export default function Navbar() {
           <span aria-hidden='true'></span>
         </a>
       </div>
-      <div id='navbarBasicExample' className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
+      <div id='navbarBasicExample navbarPosition' className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className='navbar-end'>
           <div className='navbar-item'>
             <a href='/home' className='navbar-item'>

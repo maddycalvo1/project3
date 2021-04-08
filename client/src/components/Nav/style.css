@@ -17,15 +17,23 @@
  
   }
   a.navbar-item {
-    color: white;
+    color: rgb(12, 3, 3);
     font-weight: 700;
+    
+  
   }
 
 
 
-  .navbar-menu{
+  #navbarPosition{
     padding-left: 25%;
     padding-right: 5%;
+  }
+
+  .navbar-menu.is-active{
+    padding:0;
+    color: black;
+   margin-top: 100px;
   }
 
   .navbar-logo{
@@ -43,4 +51,7 @@
     background: -webkit-linear-gradient(#a288bf, #7731cd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .navbar-burger{
+    margin-left: 20px;
   }
