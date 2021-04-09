@@ -23,10 +23,12 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/SearchResultsPage" component={SearchResultsPage} />
             {/* <Route exact path="/ParksPage" component={ParksPage} /> */}
-            <Route exact path="/posts/:id" component={Detail} />
+            <Route exact path="/Detail" component={Detail} />
             <Route exact path="/AboutUs" component={AboutUs} />
             <Route exact path ="/*" component={NoMatch} />
           </Switch>
+
+          {/* posts/:id */}
         
         </StoreProvider>
       </div>
