@@ -41,12 +41,7 @@ export default function Navbar() {
             <a href='/aboutus' className='navbar-item'>
               About Us
             </a>
-            <a href='/parks' className='navbar-item'>
-              Parks
-            </a>
-            <a href='/home' className='navbar-item'>
-              Details
-            </a>
+          
           </div>
         </div>
       </div>
