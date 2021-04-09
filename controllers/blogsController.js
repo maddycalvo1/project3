@@ -1,4 +1,4 @@
-const { Park } = require("../models");
+const { Park, BlogPost } = require("../models");
 const db = require("../models");
 const Blog = require("../models/blog");
 
@@ -18,10 +18,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Blog
+    db.BlogPost
       .create(req.body)
       // .then(dbModel => res.json(dbModel))
       .then((result) => {
+        console.log('log: result ', result);
         Park.findOne({ name: result.park }, (err, park) => {
           if (park) {
             park.blog.push(result);

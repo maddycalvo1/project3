@@ -23,6 +23,8 @@ export default {
   },
   // Time to save a Blog thing!
   saveBlog: function(blogData) {
-    return axios.post("api/blogs", blogData)
+    return axios.post("api/blog", blogData)
   }
 };
+
+// we were only working on the saveBlog NOT the getBlogs

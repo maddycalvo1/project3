@@ -19,14 +19,14 @@ const router = require("express").Router();
         )
         .then(response => {
             let data = response.data.results[0].geometry.location.lat +","+ response.data.results[0].geometry.location.lng;
-            console.log(data);
+            // console.log(data);
             // res.send(data);
             console.log("banana");
             return axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=park&name=dog&rankby=distance&location='+data+'&key='+key)
         })
         .then(response => {
             res.send(response.data)
-            console.log(response.data);
+            // console.log(response.data);
         })
         .catch(err => res.send(err));
     });
@@ -51,7 +51,7 @@ const router = require("express").Router();
             // return getParkData(res.data.results[0].geometry.location.lat +","+ res.data.results[0].geometry.location.lng)
             // res.data.results[0].geometry.location
             let data = response.data.result
-            console.log(data);
+            // console.log(data);
             res.send(data);
         }).catch(err => res.send(err));
     });
