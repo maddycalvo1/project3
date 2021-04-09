@@ -1,0 +1,19 @@
+body{
+background-color: white;
+}
+
+
+
+.dogPhoto{
+    background: linear-gradient(to right,rgba(225, 225, 225, 0.096) 15%,#3298dc 40%, rgb(0, 0, 0) 100%);
+
+  
+}
+
+
+.DogImage{
+    background: linear-gradient(to top,#3298dc 5%,#ffffff 40%, #ffffff 100%);
+
+    text-align: center;
+
+}
