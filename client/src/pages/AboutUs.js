@@ -8,7 +8,7 @@ function App() {
     <div>
 
         <Container fluid>
-          <Col size="md-12">
+          <Columns>
             <div className='About'>
           <Card 
           title='Madison Calvo'
@@ -34,7 +34,9 @@ function App() {
 
         </div>
 
+        </Columns>
 
+      <Columns>
         <div className='About'>
           <Card 
           title='Nathaniel Scott'
@@ -62,7 +64,7 @@ function App() {
 
 
         
-          </Col>
+          </Columns>
         </Container>
     </div>
   );
