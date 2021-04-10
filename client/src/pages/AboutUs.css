@@ -1,12 +1,41 @@
-/* body.{
+.AboutUs{
     background: linear-gradient(
         to right, 
-        #3298dc 0%, 
-        #3298dc 50%, 
+        #c6e0f0 0%, 
+        #c6e0f0 50%, 
         #000000 50%, 
         #000000 100%
       );
-} */
+
+}
+
+
+.about-Body{
+   padding-top: 20px;
+      display: flex;
+
+}
+
+.ourLogo{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.OurTitle{
+    font-size: 35px;
+}
+
+
+.ourStory{
+  color:white;
+    font-size: 20px;
+   text-align: center;
+   margin-top: 250px;
+   max-width: 700px;
+   margin-right: 25px;
+   
+}
 
 
 /* .Nital{

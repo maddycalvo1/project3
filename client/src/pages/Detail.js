@@ -4,7 +4,7 @@ import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import Footer from "../components/Footer/Footer"
 import { Col, Columns, Container } from "../components/Grid";
-import Posts from "../components/Posts";
+// import Posts from "../components/Posts";
 
 
 
@@ -19,7 +19,7 @@ function Detail(props) {
           <Col size="is-12">
             <h1 className="hero">{linkData.name}</h1>
             <div>
-            <Posts placeId={linkData.place_id} />
+            {/* <Posts placeId={linkData.place_id} /> */}
             </div>
           </Col>
       </Columns>
