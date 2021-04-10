@@ -1,7 +1,7 @@
-import React from 'react'
-import "./Blog.css"
+import React from 'react';
+import "./Blog.css";
 
-function Blog() {
+function Blog({title, comment, date, park_Id}) {
     return (
         <>
             <section className="section">
@@ -10,14 +10,14 @@ function Blog() {
                     <div className="tile is-ancestor">
                         <div className="tile is-parent">
                             <article className="tile is-child green post">
-                                <a className="post__category" href="">Animals</a>
-                                <h2 className="post__title">Blog #1</h2>
-                                <div className="post__content">Awesome APP</div>
+                                <h2 className="post_category">Date Posted: {date}</h2>
+                                <h2 className="post__title">{title}</h2>
+                                <div className="post__content">{comment}</div>
                                 <a className="post__permalink" href="">Learn more</a>
                             </article>
                         </div>
 
-                        <div className="tile is-6 is-parent">
+                        {/* <div className="tile is-6 is-parent">
                             <article className="tile is-child pink post">
                                 <a className="post__category" href="">Other</a>
                                 <h2 className="post__title">Blog #2</h2>
@@ -39,10 +39,10 @@ function Blog() {
                                 <div className="post__content">Nulla neque tortor, posuere eget euismod sit amet, auctor non odio. Nulla quis aliquam nibh. Donec maximus metus nec posuere commodo.</div>
                                 <a className="post__permalink" href="">Learn more</a>
                             </article>
-                        </div>
+                        </div> */}
                     </div>
 
-                    <div className="tile is-ancestor">
+                    {/* <div className="tile is-ancestor">
                         <div className="tile is-6 is-parent">
                             <article className="tile is-child gray post">
                                 <a className="post__category" href="">technology</a>
@@ -77,13 +77,13 @@ function Blog() {
                                 <a className="post__permalink" href="">Learn more</a>
                             </article>
                         </div>
-                    </div>
+                    </div> */}
 
 
                 </div>
             </section>
         </>
     )
-}
+};
 
-export default Blog
+export default Blog;
