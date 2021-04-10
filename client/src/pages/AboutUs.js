@@ -5,9 +5,11 @@ import "./AboutUs.css"
 import Footer from "../components/Footer/Footer.js";
 
 
-function App() {
+function About() {
   return (
-    <div>
+    <>
+    <div className="AboutUs">
+    <div className="about-Body">
 
         <Container fluid>
           <Columns className="columnStyle">
@@ -72,13 +74,20 @@ function App() {
         
           </Columns>
         </Container>
-<br/>
-<br/>
-        <Footer />
-
+        <div className="ourStory">
+          <h1 className="OurTitle">OUR STORY</h1>
+        <p>
+        “<span className="ourLogo">Dog <i className="fas fa-paw"></i>Bloggs</span> helps people search and share their most meaningful experiences with mans best friend. Our goal is to give you an opportunity to search and visit parks in their area.
+         We want you to share your collective experiences with us”.</p>
+        </div>
     </div>
-
+        <br className="breakONE" />
+        <br className="breakONE" />
+        <br className="breakONE" />
+    <Footer />
+    </div>
+    </>
   );
 }
 
-export default App;
+export default About;
