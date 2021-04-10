@@ -5,7 +5,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.BlogPost
-      .find({place_id: req.body.linkData.place_id})
+      .find({place_id: req.body.place_id})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -18,12 +18,12 @@ export default {
     return axios.post("/api/books", bookData);
   },
   // Get all the blogs! ALL OF THEM!!!
-  getBlogs: function() {
-    return axios.get("/api/blogs")
+  getBlogs: function(linkData) {
+    return axios.get("/api/blogs", linkData);
   },
   // Time to save a Blog thing!
   saveBlog: function(blogData) {
-    return axios.post("api/blog", blogData)
+    return axios.post("api/blog", blogData);
   }
 };
 

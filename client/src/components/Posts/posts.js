@@ -12,7 +12,7 @@ function Posts({summary, username, title, comment, date, park_Id}) {
                 </div>
 
                 <div className="card-body">
-                    <p> {body} </p>
+                    {/* <p> {body} </p> */}
                 </div>
 
             </div>
@@ -22,3 +22,5 @@ function Posts({summary, username, title, comment, date, park_Id}) {
         </div>
 	)
 }
+
+export default Posts;

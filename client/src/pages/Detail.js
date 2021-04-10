@@ -5,13 +5,27 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import { Col, Columns, Container } from "../components/Grid";
 import Blog from "../components/Blog/Blog";
+// import Posts from "../components/Posts";
+import CreatePostForm from "../components/CreatePostForm";
+import Posts from "../components/Posts/Posts";
+import API from "../utils/API";
+import { useStoreContext } from "../utils/GlobalState";
 
 
-
-function Detail(props) {
+const Detail = props => {
 
   const { linkData } = props.location.state;
+
+  const [state, dispatch] = useStoreContext();
+
+  useEffect(() => {
+    API.getBlogs(linkData.place_id)
+      .then(res => dispatch({ post: res.data }))
+      .catch(err => console.log(err));
+  }, []);
+
   console.log('log: linkData ', linkData);
+
 
   return (
     <Container fluid>
@@ -19,7 +33,9 @@ function Detail(props) {
           <Col size="is-12">
             <h1 className="hero">{linkData.name}</h1>
             <div>
-            <Blog placeId={linkData.place_id} />
+            {/* <Posts placeId={linkData.place_id} /> */}
+            <CreatePostForm/>
+            <Posts/>
             </div>
           </Col>
       </Columns>
